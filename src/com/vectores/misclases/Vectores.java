@@ -105,6 +105,7 @@ public class Vectores {
 	
 	public int[] vecPares(int[] vector)
 	{		
+		
 		for(int i=0;i<vector.length;i++)
 		{
 			if(vector[i]%2==0)
