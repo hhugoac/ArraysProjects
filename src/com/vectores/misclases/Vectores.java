@@ -103,16 +103,35 @@ public class Vectores {
 	
 	//Metodo que reotrna un vector con elementos pares de un vector
 	
-	public int[] vecPares(int[] vector)
+		public int[] vecPares(int[] vector,int nPares)
+		{		
+			int[] Pares=new int [nPares];
+			
+			
+			for(int i=0;i<vector.length;i++)
+			{
+				if(vector[i]%2==0)
+				{
+					Pares[i]=vector[i];
+				}
+			}
+			return Pares; 
+		}
+	
+	//Metodo que reotrna un vector con elementos impares de un vector
+	
+	public int[] vecImpares(int[] vector,int nImpares)
 	{		
+		int[] impares=new int [nImpares];
+		
 		
 		for(int i=0;i<vector.length;i++)
 		{
 			if(vector[i]%2==0)
 			{
-				Pares[i]=vector[i];
+				impares[i]=vector[i];
 			}
 		}
-		return Pares; 
+		return impares; 
 	}
 }
