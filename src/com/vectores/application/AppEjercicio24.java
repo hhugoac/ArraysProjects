@@ -8,8 +8,12 @@ public class AppEjercicio24 {
 		final int NUM_ELEMENTOS=20;
 		final int PARES_IMPARES=2;
 		
+		
 		int[] vector=new int[NUM_ELEMENTOS];
 		int[] paresimpares=new int[PARES_IMPARES];
+		boolean[] isPrimo=new boolean[NUM_ELEMENTOS];
+		int iNumPrimos=0;
+		
 		Vectores objVec1=new Vectores();
 		
 		System.out.println("Ejercicio 23. de unos");
@@ -37,6 +41,20 @@ public class AppEjercicio24 {
 		imprimirVector(paresimpares);
 		System.out.println("La cantidad de pares es "+objVec1.contadorPares(vector));
 		System.out.println("La cantidad de pares es "+objVec1.contadorImpares(vector));
+		
+		System.out.println("Ejercicio 29. Cuenta los numeros primos dentro de un vector.");
+		isPrimo=objVec1.isPrimovec(vector);
+		iNumPrimos=objVec1.iNumPrimos(isPrimo);
+		System.out.println("La cantidad de primos en el vector es: "+objVec1.iNumPrimos(isPrimo));
+
+  
+		System.out.println("Ejercicio 30. La suma de los elementos de  un vector.");
+		System.out.println("La cantidad de primos en el vector es: "+objVec1.iSumaVec(vector));
+		
+		System.out.println("Ejercicio 31. Inversion de las posiciones de un vector.");
+		imprimirVector(vector);
+		vector=objVec1.llenadoInversion(vector);
+		imprimirVector(vector);
 		
 		
 	}

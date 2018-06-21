@@ -134,4 +134,97 @@ public class Vectores {
 		}
 		return impares; 
 	}
+	//Metodo que retorna un vector booleano donde dice si son primos los elementos de un vector de entrada
+	public boolean[] isPrimovec(int[] vector)
+	{	
+		boolean[] boolPrimos=new boolean[vector.length];
+		
+		//Inicializacion del vector
+		for(int i=0;i<vector.length;i++)
+		{
+			boolPrimos[i]=true;
+		}
+		
+		for(int i=0;i<vector.length;i++)
+		{
+			for(int j=2;j<vector[i];j++)
+			{
+				if(vector[i]%j==0)
+				{
+					boolPrimos[i]=false;
+				}
+			}
+		}
+		
+		return boolPrimos;
+	}
+	
+	//Metodo que retorna un vector booleano con las posiciones de los numeros primos
+	public int iNumPrimos(boolean[] vector)
+	{
+		int iNumprimos=0;
+		for(int i=0; i<vector.length;i++)
+		{
+			if(vector[i]==true)
+			{
+				iNumprimos+=1;
+			}
+		}
+		return iNumprimos;
+	}
+	
+	//Metodo que retorna un vector de numeros primos de otro vector 
+	public int[] iPrimo(boolean[] vectorbol,int[] vector,int iNumprimos)
+	{
+		int[] iPrimos=new int [iNumprimos];
+		for(int i=0;i<vector.length;i++)
+		{
+			if(vectorbol[i]==true)
+			{
+				iPrimos[i]=vector[i];
+			}
+				
+		}
+		return iPrimos;
+	}
+	
+	//Metodo que retorna la suma de los elementos de un vector
+	public int iSumaVec(int[] vector)
+	{
+		int iSuma=0;
+		for(int i=0;i<vector.length;i++)
+		{
+			iSuma+=vector[i];
+		}
+		return iSuma;
+	}
+	
+	//Metodo que retorna un vector con las posiciones inevertidas de sus elementos 
+	public int[] llenadoInversion(int[] vector)
+	{
+		int[] vecInvertido=new int[vector.length];
+		int vecAux;
+		
+		for(int i=0;i<vector.length;i++)
+		{
+			vecInvertido[i]=vector[vector.length-i-1];
+		}
+		return vecInvertido;
+	}
+	
+	public int[] ordenAscendente(int[] vector)
+	{
+		int[] vecOrdenado=new int[vector.length];
+		int iaux;
+		
+		for(int i=0;i<vector.length;i++)
+		{
+			
+		}
+		return vecOrdenado;
+	}
+	
+	
+	
+	
 }
